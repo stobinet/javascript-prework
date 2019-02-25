@@ -10,3 +10,9 @@ printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wy
 var playerMove;
 playerMove = "papier";
 printMessage('Zagrałam ' + playerMove + '! Jeśli Twój ruch to kamień, to wygrywam!');
+
+// an integer range 11-19
+var randomNumber;
+randomNumber = Math.floor((Math.random() * 9) + 11);
+printMessage('Wylosowana liczba to: ' + randomNumber);
+
