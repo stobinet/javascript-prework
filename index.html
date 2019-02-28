@@ -9,13 +9,25 @@
 
 <body>
 	<div class="container">
-		<div id="buttons">
-			<button id="button-rock">Kamień</button>
-			<button id="button-paper">Papier</button>
-			<button id="button-scissors">Nożyce</button>
-			<button id="button-test">Test</button>
+		<div class="rules">
+			<h1>Gra "Kamień, papier, nożyce"</h1>
+			<h2>Zasady gry:</h2>
+			<p>Gra dla dwóch graczy – rolę drugiego gracza pełni skrypt, czyli "gramy z komputerem".
+				<p>Wynik rundy może być następujący:</p>
+				<ol>
+					<li>Remis – jeśli obaj gracze wybrali ten sam ruch,</li>
+					<li>Wygrana gracza, który zagrał papier, jeśli drugi gracz zagrał kamień,</li>
+					<li>Wygrana gracza, który zagrał kamień, jeśli drugi gracz zagrał nożyce,</li>
+					<li>Wygrana gracza, który zagrał nożyce, jeśli drugi gracz zagrał papier.</li>
+				</ol>
+				<div id="buttons">
+					<button id="button-rock">Kamień</button>
+					<button id="button-paper">Papier</button>
+					<button id="button-scissors">Nożyce</button>
+					<button id="button-test">Test</button>
+				</div>
+				<div id="messages"></div>
 		</div>
-		<div id="messages"></div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
