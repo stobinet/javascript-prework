@@ -1,10 +1,11 @@
 
-var buttonName, buttonRock, buttonPaper, buttonScissors;
+var buttonName, buttonRock, buttonPaper, buttonScissors, buttonTest;
 
 
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
+buttonTest = document.getElementById('button-test');
 
 /**
  * Game interface with buttons
@@ -64,3 +65,4 @@ function buttonClicked(buttonName) {
 buttonRock.addEventListener('click', function () { buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function () { buttonClicked('papier'); });
 buttonScissors.addEventListener('click', function () { buttonClicked('nożyce'); });
+buttonTest.addEventListener('click', function () { buttonClicked('test'); });
