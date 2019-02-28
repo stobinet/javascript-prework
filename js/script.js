@@ -14,10 +14,10 @@ function buttonClicked(buttonName) {
     clearMessages();
     console.log(buttonName + ' został kliknięty');
 
-    var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber;
+    var argMoveId, argPlayerMove, argComputerMove, argbuttonName, computerMove, playerMove, randomNumber, playerMove1;
 
     /**
-     *  Player/Computer movement
+     *  Computer movement
      */
     function getMoveName(argMoveId) {
         console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -28,7 +28,23 @@ function buttonClicked(buttonName) {
         } else if (argMoveId == 3) {
             return 'nożyce';
         } else {
-            printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
+            return 'kamień';
+        }
+    }
+
+    /**
+     *  Player movement
+     */
+    function getButtonName(argbuttonName) {
+        console.log('wywołano funkcję getButtonName z argumentem: ' + argbuttonName);
+        if (argbuttonName == 'kamień') {
+            return 'kamień';
+        } else if (argbuttonName == 'papier') {
+            return 'papier';
+        } else if (argbuttonName == 'nożyce') {
+            return 'nożyce';
+        } else {
+            printMessage('Nie znam przycisku Test. Zakładam, że chodziło o "kamień".');
             return 'kamień';
         }
     }
@@ -53,12 +69,13 @@ function buttonClicked(buttonName) {
     }
 
     playerMove = buttonName;
-    console.log('ruch gracza to: ' + playerMove);
+    playerMove1 = getButtonName(playerMove);
+    console.log('ruch gracza to: ' + playerMove1);
     randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
     computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
-    displayResult(playerMove, computerMove);
+    displayResult(playerMove1, computerMove);
 
 }
 
