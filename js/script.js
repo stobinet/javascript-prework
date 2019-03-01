@@ -2,10 +2,10 @@
 //let buttonName, buttonRock, buttonPaper, buttonScissors, buttonTest;
 
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
-buttonTest = document.getElementById('button-test');
+const buttonRock = document.getElementById('button-rock');
+const buttonPaper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
+const buttonTest = document.getElementById('button-test');
 
 /**
  * Game interface with buttons
@@ -52,12 +52,12 @@ function buttonClicked(buttonName) {
     }
 
     //let playerMove, playerMove1, computerMove, randomNumber;
-    playerMove = buttonName;
-    playerMove1 = getMoveName(playerMove);
+    const playerMove = buttonName;
+    const playerMove1 = getMoveName(playerMove);
     console.log('ruch gracza to: ' + playerMove1);
-    randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('wylosowana liczba to: ' + randomNumber);
-    computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
     console.log('ruch komputera to: ' + computerMove);
     displayResult(playerMove1, computerMove);
 
